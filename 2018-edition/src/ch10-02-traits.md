@@ -327,6 +327,10 @@ parameter list, making the function signature hard to read. For this reason,
 Rust has alternate syntax for specifying trait bounds inside a `where` clause
 after the function signature. So instead of writing this:
 
+```rust,ignore
+fn some_function<T: Display + Clone, U: Clone + Debug>(t: T, u: U) -> i32 {
+```
+
 we can use a `where` clause, like this:
 
 ```rust,ignore
